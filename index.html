@@ -40,8 +40,8 @@
 
             <div class="header">
                 <div class="wrapper">
-                    <p><span>January 2023</span></p>
-                    <p>Thursday, Jan 4, 2022</p>
+                    <p><span id="day">January 2023</span></p>
+                    <p id="date">Thursday, Jan 4, 2022</p>
                 </div>
                 <div class="search">
                     <form action="">
@@ -137,20 +137,22 @@
             <div class="side-header">
                 <div class="contain">
                     <span>
-                        <p>Brussels, Belgium</p>
+                        <p id="city">Brussels, Belgium</p>
                     </span>
-                    <p>Brussels, Belgium</p>
+                    <div>
+                        <p id="country">Brussels, Belgium</p>
+                    </div>
+                    
                 </div>
-                <p class="time">08:54 AM</p>
+                <p class="time" id="timezone">08:54 AM</p>
 
             </div>
             <div class="degrees">
-                <i class="fa-solid fa-cloud"></i>
+                <img id="temp-icon" style="height: auto; width: 60px;"></img>
                 <div class="number">
-                    <p>20° C</p>
+                    <p id="temp">20° C</p>
                     <div>
-                        <p>Dramatic</p>
-                        <p>Cloudy</p>
+                        <p id="desc">Dramatic</p>
                     </div>
                 </div>
             </div>
