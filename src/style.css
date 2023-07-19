@@ -1,3 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-    background-color: red;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    color: #898c95;
+    background-color: #eef2f4;
+    font-size: larger;
+}
+
+.logo {
+    flex: 0 0 15%;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-size: 25px;
+    font-weight: 900;
+    color: #2f69fe;
+}
+
+.logo span {
+    padding: 15px;
+}
+
+.menu {
+    flex: 0 0 65%;
+    padding-left: 50px;
+}
+
+.menu ul {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu #mark,
+.menu i #mark {
+    color: #2f69fe;
+}
+
+.menu li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 20%;
+    padding-left: 50px;
+}
+
+.footer p {
+    margin-left: -25px;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+.footer li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.footer #mark {
+    color: #102546;
+}
+
+.hero {
+    background-color: white;
+}
+
+.side {
+    background: rgb(60, 73, 89);
+    background: linear-gradient(180deg, rgba(60, 73, 89, 1) 0%, rgba(18, 44, 77, 1) 28%);
+}
+
+
+.header {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eef2f4;
+}
+
+.header p span {
+    color: #122c4d;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.header p {
+    color: #898c95;
+}
+
+.wrapper {
+    flex: 0 0 30%;
+}
+
+.search {
+    padding: 10px;
+    flex: 0 0 30%;
+    background-color: #eef2f4;
+    border-radius: 5px;
+}
+
+.search .search-box {
+    background-color: #eef2f4;
+    border: none;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+}
+
+.search:focus-within {
+    outline: #122c4d solid 2px;
+}
+
+.icons {
+    flex: 0 0 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-bell,
+.fa-user {
+    padding: 10px;
+    background-color: #eef2f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.today {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    color: #141936;
+}
+
+.overview {
+    padding-left: 40px;
+}
+
+.overview .today .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #2f69fe;
+    cursor: pointer;
+}
+
+.cards {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #eef2f4;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.symbol {
+    font-size: 25px;
+    color: #2f69fe;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info .small {
+    color: #898c95;
+    font-size: 13px;
+}
+
+.info .big {
+    color: #102546;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.previous {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.fa-sort-down {
+    color: #2f69fe;
+    padding-bottom: 4px;
+}
+
+.average canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+
+
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: #eef2f4;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.side-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-header .time {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.contain p {
+    color: #898c95;
+    font-size: 15px;
+}
+
+.contain span p {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+.degrees {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #898c95;
+}
+
+.degrees .fa-cloud {
+    font-size: 35px;
+}
+
+.degrees .number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -40px;
+    margin-bottom: -10px;
+}
+
+.degrees .number p {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.degrees .number div p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: -1px;
+    margin-top: -1px;
+}
+
+.degrees .number div {
+    display: flex;
+    flex-direction: column;
+}
+
+.rain .rainoverview {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bars {
+    display: flex;
+    flex-direction: column;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.bar p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#progress {
+    width: 70%;
+    background-color: #2a4161;
+    border-radius: 15px;
+}
+
+#progressbar {
+    width: 33%;
+    height: 30px;
+    background-color: #8cb1fc;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+.sun-overview {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sun-overview div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sun-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c497e;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.sun-card .wrapper-sun {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sun-card #mark {
+    border: solid 2px #8cb1fc;
+}
+
+.sun-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sun-card div div #span {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.sun-card span {
+    font-weight: 600;
+}
+
+#mark-sun {
+    border: 1px solid #8cb1fc;
 }

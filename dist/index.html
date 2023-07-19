@@ -1,12 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Weather App</title>
 </head>
-<body>
 
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <div>
+                    <li><i class="fa-solid fa-bolt"></i><span>Weather App</span></li>
+                </div>
+
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><i class="fa-solid fa-house" id="mark"></i><span id="mark">Dashboard</span></li>
+                    <li><i class="fa-solid fa-map"></i><span>Map</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i><span>Saved Location</span></li>
+                    <li><i class="fa-solid fa-calendar"></i><span>Calendar</span></li>
+                </ul>
+            </div>
+            <div class="footer">
+                <p>System</p>
+                <ul>
+                    <li><i class="fa-solid fa-gear"></i><span>Settings</span></li>
+                    <li><i class="fa-solid fa-arrow-right-from-bracket" id="mark"></i><span id="mark">Logout
+                            account</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero">
+
+            <div class="header">
+                <div class="wrapper">
+                    <p><span>January 2023</span></p>
+                    <p>Thursday, Jan 4, 2022</p>
+                </div>
+                <div class="search">
+                    <form action="">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text" class="search-box" placeholder="Search location here">
+                    </form>
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-bell"></i>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+            </div>
+
+            <div class="overview">
+                <div class="today">
+                    <p>Today overview</p>
+                    <div class="wrapper">
+                        <span>More details</span><i class="fa-solid fa-up-right-from-square"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="symbol">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <div class="info">
+                        <p class="small">Wind Speed</p>
+                        <p class="big">12km/h</p>
+                    </div>
+                    <div class="previous">
+                        <i class="fa-solid fa-sort-down"></i>
+                        <p>2km/h</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="symbol">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <div class="info">
+                        <p class="small">Wind Speed</p>
+                        <p class="big">12km/h</p>
+                    </div>
+                    <div class="previous">
+                        <i class="fa-solid fa-sort-down"></i>
+                        <p>2km/h</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="symbol">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <div class="info">
+                        <p class="small">Wind Speed</p>
+                        <p class="big">12km/h</p>
+                    </div>
+                    <div class="previous">
+                        <i class="fa-solid fa-sort-down"></i>
+                        <p>2km/h</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="symbol">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <div class="info">
+                        <p class="small">Wind Speed</p>
+                        <p class="big">12km/h</p>
+                    </div>
+                    <div class="previous">
+                        <i class="fa-solid fa-sort-down"></i>
+                        <p>2km/h</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="average">
+                <div class="overview">
+                    <div class="today">
+                        <p>Average Weekly Temperature</p>
+                        <div class="wrapper">
+                            <span>Brussels, Belgium</span><i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div class="side">
+            <div class="side-header">
+                <div class="contain">
+                    <span>
+                        <p>Brussels, Belgium</p>
+                    </span>
+                    <p>Brussels, Belgium</p>
+                </div>
+                <p class="time">08:54 AM</p>
+
+            </div>
+            <div class="degrees">
+                <i class="fa-solid fa-cloud"></i>
+                <div class="number">
+                    <p>20° C</p>
+                    <div>
+                        <p>Dramatic</p>
+                        <p>Cloudy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rain">
+                <p class="rainoverview">Chances of rain</p>
+                <div class="bars">
+                    <div class="bar">
+                        <p>7 PM</p>
+                        <div id="progress">
+                            <div id="progressbar"></div>
+                        </div>
+                        <p>44 %</p>
+                    </div>
+                    <div class="bar">
+                        <p>7 PM</p>
+                        <div id="progress">
+                            <div id="progressbar"></div>
+                        </div>
+                        <p>44 %</p>
+                    </div>
+                    <div class="bar">
+                        <p>7 PM</p>
+                        <div id="progress">
+                            <div id="progressbar"></div>
+                        </div>
+                        <p>44 %</p>
+                    </div>
+                    <div class="bar">
+                        <p>7 PM</p>
+                        <div id="progress">
+                            <div id="progressbar"></div>
+                        </div>
+                        <p>44 %</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sun">
+                <div class="sun-overview">
+                    <p>Sunrise & Sunset</p>
+                    <div>
+                        <p>Belgium</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="sun-cards">
+                    <div class="sun-card" id="mark-sun">
+                        <div class="wrapper-sun">
+                            <i class="fa-solid fa-sun"></i>
+                            <div>
+                                <p>Sunrise</p>
+                                <p id="span">4:20 AM</p>
+                            </div>
+                        </div>
+                        <span>
+                            <p>4 hours ago</p>
+                        </span>
+                    </div>
+                    <div class="sun-card">
+                        <div class="wrapper-sun">
+                            <i class="fa-solid fa-sun"></i>
+                            <div>
+                                <p>Sunrise</p>
+                                <p id="span">4:20 AM</p>
+                            </div>
+                        </div>
+                        <span>
+                            <p>4 hours ago</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
     <script src="main.js"></script>
 </body>
+
 </html>
