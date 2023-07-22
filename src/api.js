@@ -29,6 +29,19 @@ class WeatherAPI {
       throw new Error(`Error retrieving local time: ${error.message}`);
     }
   }
+
+  async getForecast(location) {
+    try {
+      const response = await fetch(`${this.baseUrl}/forecast.json?key=${this.apiKey}&q=${location}`);
+      if (!response.ok) {
+        throw new Error('Forecast request failed!');
+      }
+      const foreCastData = await response.json();
+      return foreCastData;
+    } catch (error) {
+      throw new Error(`Error retrieving local time: ${error.message}`);
+    }
+  }
 }
 
 export default WeatherAPI;
