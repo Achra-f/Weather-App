@@ -44,7 +44,7 @@
                     <p id="date">Thursday, Jan 4, 2022</p>
                 </div>
                 <div class="search">
-                    <form action="">
+                    <form action="" id="search-form">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
                         <input type="text" class="search-box" placeholder="Search location here">
                     </form>
@@ -71,55 +71,40 @@
                     </div>
                     <div class="info">
                         <p class="small">Wind Speed</p>
-                        <p class="big">12km/h</p>
-                    </div>
-                    <div class="previous">
-                        <i class="fa-solid fa-sort-down"></i>
-                        <p>2km/h</p>
+                        <p class="big" id="wind">12km/h</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="symbol">
-                        <i class="fa-solid fa-wind"></i>
+                        <i class="fa-solid fa-cloud-rain"></i>
                     </div>
                     <div class="info">
-                        <p class="small">Wind Speed</p>
-                        <p class="big">12km/h</p>
-                    </div>
-                    <div class="previous">
-                        <i class="fa-solid fa-sort-down"></i>
-                        <p>2km/h</p>
+                        <p class="small">Chance of Rain</p>
+                        <p class="big" id="chance-rain">53%</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="symbol">
-                        <i class="fa-solid fa-wind"></i>
+                        <i class="fa-solid fa-arrows-down-to-line"></i>
                     </div>
                     <div class="info">
-                        <p class="small">Wind Speed</p>
-                        <p class="big">12km/h</p>
-                    </div>
-                    <div class="previous">
-                        <i class="fa-solid fa-sort-down"></i>
-                        <p>2km/h</p>
+                        <p class="small">Pressure</p>
+                        <p class="big" id="pressure">1058 hpa</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="symbol">
-                        <i class="fa-solid fa-wind"></i>
+                        <i class="fa-regular fa-sun"></i>
                     </div>
                     <div class="info">
-                        <p class="small">Wind Speed</p>
-                        <p class="big">12km/h</p>
-                    </div>
-                    <div class="previous">
-                        <i class="fa-solid fa-sort-down"></i>
-                        <p>2km/h</p>
+                        <p class="small">Uv index</p>
+                        <p class="big" id="uv">2,3</p>
                     </div>
                 </div>
 
             </div>
 
+            <!--
             <div class="average">
                 <div class="overview">
                     <div class="today">
@@ -132,6 +117,7 @@
 
                 <canvas id="myChart"></canvas>
             </div>
+            -->
         </div>
         <div class="side">
             <div class="side-header">
@@ -164,7 +150,7 @@
                         <div id="progress">
                             <div id="progressbar"></div>
                         </div>
-                        <p>44 %</p>
+                        <p id="rain-percentage"></p>
                     </div>
                     <div class="bar">
                         <p>7 PM</p>
